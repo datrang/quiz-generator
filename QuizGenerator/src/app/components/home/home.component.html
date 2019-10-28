@@ -1,0 +1,22 @@
+<div class="container" align="center">
+    <div class="card" style="text-align:left; margin-top:10%; width:50%">
+        <div class="card-body">
+            <div class="text-center">
+                <h1>Home</h1>
+                <small class="text-danger">{{error}}</small>
+            </div>
+            <form [formGroup] = "areaForm">
+                <div class="form-group">
+                    <label>Area</label>
+                    <select class="form-control" formControlName="area">
+                        <option>Basketball</option>
+                        <option>Baseball</option>
+                        <option>Hocky</option>
+                        <option>Football</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
