@@ -1,0 +1,21 @@
+{
+    "area": "Baseball",
+    "questions": [{
+        "question": "Against what opposing team did Babe Ruth hit his first career home run?",
+        "choices": ["New York Yankees", "Baltimore Black Sox", "Boston Red Sox", "Chicago Cubs"],
+        "answer": 0
+        },
+        {
+        "question": "Which pitcher had no right hand?",
+        "choices": ["Jim Colborn", "Jim Abbott", "Stubby Clapp", "Guy Hecker"],
+        "answer": 1
+        },{
+        "question": "What player was killed by a pitch from Yankees pitcher Carl Mays?",
+        "choices": ["Bryce Florie", "Herb Score", "Tony Conigliaro", "Ray Chapman"],
+        "answer": 3
+        },{
+        "question": "During which inning is \"Take Me Out to the Ballgame\" traditionally sung?",
+        "choices": ["1st", "3rd", "5th", "7th"],
+        "answer": 3
+        }]
+}

@@ -1,0 +1,21 @@
+{
+    "area": "Basketball",
+    "questions": [{
+        "question": "Who was the first player in NBA history to be elected league MVP by a unanimous vote?",
+        "choices": ["Magic Johnson", "Michael Jordan", "Stephen Curry", "Lebron James"],
+        "answer": 2
+    },
+    {
+        "question": "Who was the youngest player to score 10,000 points in the NBA?",
+        "choices": ["Wilt Chamberlain", "Michael Jordan", "Kobe Bryant", "Lebron James"],
+        "answer": 3
+    },{
+        "question": "Who was the first Chinese player to play in an NBA game?",
+        "choices": ["Mao Zedong", "Jeremy Lin", "Wang Zhizhi", "Yao Ming"],
+        "answer": 2
+    },{
+        "question": "What was the original name of Oklahoma City Thundesr",
+        "choices": ["Cincinatti Foxes", "San Diego Waves", "Seattle SuperSonics", "St.Louis Alligators"],
+        "answer": 2
+    }]
+}

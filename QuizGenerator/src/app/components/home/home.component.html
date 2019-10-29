@@ -4,18 +4,20 @@
             <div class="text-center">
                 <h1>Home</h1>
                 <small class="text-danger">{{error}}</small>
-            </div>
-            <form [formGroup] = "areaForm">
+            </div>      
+            <form [formGroup] = "areaForm" (ngSubmit)="onSubmit()">
                 <div class="form-group">
                     <label>Area</label>
                     <select class="form-control" formControlName="area">
-                        <option>Basketball</option>
-                        <option>Baseball</option>
-                        <option>Hocky</option>
-                        <option>Football</option>
+                        <option value="baseball">Baseball</option>
+                        <option value="basketball">Basketball</option>
+                        <option value="football">Football</option>
+                        <option value="hockey">Hockey</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-dark">Submit</button>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                </div>
             </form>
         </div>
     </div>

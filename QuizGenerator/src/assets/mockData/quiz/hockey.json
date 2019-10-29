@@ -1,0 +1,21 @@
+{
+    "area": "Hockey",
+    "questions": [{
+        "question": "Who was the #1 star in Game 7 of the 2001 Stanley Cup final?",
+        "choices": ["Patrick Roy", "Joe Sakic", "Alex Tanguay", "Patrick Elias"],
+        "answer": 2
+    },
+    {
+        "question": "Who was the first Taiwanese to win the Norris Trophy as the Leauge's best defensemen?",
+        "choices": ["Bobby Orr", "Paul Coffey", "Rod Langway", "Ray Bourque"],
+        "answer": 2
+    },{
+        "question": "Who was the first American team to win 3 straight Stanley Cups?",
+        "choices": ["Detroit Red Wings", "New Jersey Devils", "Colorado Avalanche", "New York Islanders"],
+        "answer": 3
+    },{
+        "question": "From 1995-2000, no Stanley Cup finals went seven games. In the first five seasons of the 21st century, how many Stanley Cup Finals series have gone to a game 7?",
+        "choices": ["1", "2", "3", "4"],
+        "answer": 3
+    }]
+}

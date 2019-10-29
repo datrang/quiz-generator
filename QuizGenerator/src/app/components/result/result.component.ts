@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-result',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultComponent implements OnInit {
 
-  constructor() { }
+  score: number;
+
+  constructor(
+    private router: Router
+  ) { 
+    this.score = this.router.getCurrentNavigation().extras.state.score;
+  }
 
   ngOnInit() {
+  }
+
+  returnHome():void{
+    this.router.navigate(['/home']);
   }
 
 }

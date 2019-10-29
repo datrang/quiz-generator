@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { LoginService } from '../../services/login/login.service'
+import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
@@ -35,15 +36,8 @@ export class LoginComponent implements OnInit {
 
   loginUser(){
     this.loginService.loginUser(this.loginForm.value);
+    
     this.error = "Incorrect Credentials";
-
-    // console.log(this.userName.value + " " + this.password.value);
-    // if(this.loginForm.valid && this.userName.value === "admin" && this.password.value === "admin1"){
-    //   console.log("USER LOGGED IN");
-    // }else{
-    //   console.log("INCORRECT CREDENTIALS");
-    //   this.error = "Incorrect Credentials";
-    // }
   }
 
 }
