@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Quiz } from 'src/app/interfaces/quiz';
 import { QuizService } from '../../services/quiz/quiz.service';
 import { Validators, FormBuilder, FormGroup, FormArray, FormControl} from '@angular/forms';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { map, flatMap } from 'rxjs/operators';
+import { AppState } from '../../state/state/app.state'
+import { Store } from '@ngrx/store'
 
 @Component({
   selector: 'app-quiz',
@@ -21,8 +23,17 @@ export class QuizComponent implements OnInit {
   constructor(
     private quizService: QuizService, 
     private fb: FormBuilder, 
-    private route: ActivatedRoute
-  ) {}
+    private route: ActivatedRoute,
+    private router: Router,
+    private store: Store<AppState>
+  ) {
+    store.select('currentUser').subscribe(data => {
+      if(data.userName == ""){
+        console.log("REACHED");
+        router.navigate(['/login']);
+      }
+  })
+  }
 
   ngOnInit() {
     this.quizForm = this.fb.group({

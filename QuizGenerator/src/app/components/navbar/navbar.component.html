@@ -1,0 +1,21 @@
+<nav class="navbar navbar-dark bg-dark">
+    <div *ngIf="currentUser.userName.length > 0">
+        <a class="navbar-brand" routerLink="home">
+            <img src="../assets/img/letter-q-33754_1280.png" width="30" height="30" class="d-inline-block align-top" alt="Q">  
+        Quiz Generator</a>
+    </div>
+    <div *ngIf="!currentUser.userName.length > 0">
+        <a class="navbar-brand" routerLink="login">
+            <img src="../assets/img/letter-q-33754_1280.png" width="30" height="30" class="d-inline-block align-top" alt="Q">  
+        Quiz Generator</a>
+    </div>
+    <div *ngIf="currentUser.userName.length > 0">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <span class="nav-text mr-3 text-light h6">{{currentUser.userName}}</span>
+                <button type="button" class="btn btn-outline-light" (click)="logout()">LOGOUT</button>
+            </li>
+        </ul>
+
+    </div>
+</nav>

@@ -1,21 +1,39 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { LoginService } from '../../services/login/login.service'
-import { delay } from 'rxjs/operators';
+import { trigger, state, style, animate, transition, keyframes} from '@angular/animations'
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  animations: [
+    trigger('loginState', [
+      state('state1', style({
+      })),
+      transition('*=>state1', animate('500ms', keyframes([
+        style({transform: 'translateX(-5%)', offset: 0.15}),
+        style({transform: 'translateX(5%)', offset: 0.30}),
+        style({transform: 'translateX(-5%)', offset: 0.45}),
+        style({transform: 'translateX(5%)', offset: 0.60}),
+        style({transform: 'translateX(-5%)', offset: 0.75}),
+        style({transform: 'translateX(5%)', offset: 0.8}),
+        style({transform: 'translateX(-5%)', offset: 0.9}),
+        style({transform: 'translateX(5%)', offset: 1.0}),
+      ])))
+    ])
+  ]
 })
 export class LoginComponent implements OnInit {
 
   error: string;
   loginForm :FormGroup
+  state:string;
+  @Input() position;
 
   constructor(
     private fb: FormBuilder, 
-    private loginService: LoginService
+    private loginService: LoginService,
   ) { }
 
   ngOnInit() {
@@ -36,8 +54,21 @@ export class LoginComponent implements OnInit {
 
   loginUser(){
     this.loginService.loginUser(this.loginForm.value);
-    
-    this.error = "Incorrect Credentials";
+    setTimeout(() => {
+      this.error = "Incorrect Credentials"
+      this.errorAnimation();
+    },  200);
+    this.changeState(null);
+
   }
 
+  errorAnimation(){
+    for(let i = 0; i < 100; i++){
+      this.changeState('state1');
+    }
+  }
+
+  changeState(state: any){
+    this.state= state;
+  }
 }

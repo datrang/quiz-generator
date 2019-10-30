@@ -10,6 +10,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomeComponent},
   {path: 'quiz/:area', component: QuizComponent},
+  {path: 'quiz', component: HomeComponent},
   {path: 'result', component: ResultComponent}
 ];
 
