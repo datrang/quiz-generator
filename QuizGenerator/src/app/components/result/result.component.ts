@@ -10,7 +10,7 @@ import { Store } from '@ngrx/store'
 })
 export class ResultComponent implements OnInit {
 
-  score: number;
+  score: any;
 
   constructor(
     private router: Router,

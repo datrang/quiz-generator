@@ -14,18 +14,22 @@ export class QuizService {
       private router: Router
     ) { }
 
-  private mockUrl = '../../../assets/mockData/quiz/';
+  private baseUrl = 'http://localhost:3000/?category=';
 
   getQuiz(area:string): Observable<Quiz>{
 
-    let url = this.mockUrl + area + ".json";
-
+    let url = this.baseUrl + area;
     return this.http.get<Quiz>(url);
   }
 
-  finishQuiz(score:number){
-    console.log(score);
-    this.router.navigate(['/result'], {state:{score}});
+  finishQuiz(area:string, answers:number[]){
+    let url = this.baseUrl + area;
+    this.http.post(url, {
+      "category" : area,
+      "answers"  : answers
+    }).subscribe(score => 
+      this.router.navigate(['/result'], {state:{score}})
+    );
   }
   
 }

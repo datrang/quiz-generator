@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User, UserInstance } from '../../interfaces/user';
+import { Verification } from "../../interfaces/verification"
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { AppState } from '../../state/state/app.state'
@@ -11,7 +12,7 @@ import { Store } from '@ngrx/store'
 })
 export class LoginService {
 
-  private mockUrl = '../../../assets/mockData/users/'
+  private baseUrl = 'http://localhost:3000/users?username='
 
   constructor(
     private router: Router,
@@ -21,9 +22,10 @@ export class LoginService {
 
 
   loginUser(user: User){
-    let url = this.mockUrl + user.userName + ".json" 
-    this.http.get<User>(url).subscribe(data => {
-      if(user.password == data.password){
+    let url = this.baseUrl + user.userName + "&password=" + user.password;
+    console.log(url);
+    this.http.get<Verification>(url).subscribe(data => {
+      if(data.verified == true){
         this.store.dispatch(new LoginActions.Login({userName: user.userName, score:0}));
         this.router.navigate(['home']);
       }

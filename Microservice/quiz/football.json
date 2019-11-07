@@ -1,0 +1,21 @@
+{
+    "area": "Football",
+    "questions": [{
+        "question": "What team was originally named the New York Titans?",
+        "choices": ["Tennessee Titans", "New York Giants", "New York Jets", "Kansas City Chiefs"],
+        "answer": 2
+    },
+    {
+        "question": "What team won 3 Super Bowls in the 1990s?",
+        "choices": ["Cowboys", "Patriots", "49ers", "Broncos"],
+        "answer": 0
+    },{
+        "question": "Who holds the best rookie passer rating in NFL history?",
+        "choices": ["Dan Marino", "Robert Griffith III", "Tom Brady", "Dak Prescott"],
+        "answer": 3
+    },{
+        "question": "How many weeks did the regular NFL season last in 1992?",
+        "choices": ["16 weeks", "17 weeks", "18 weeks", "19 weeks"],
+        "answer": 2
+    }]
+}

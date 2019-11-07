@@ -2,7 +2,9 @@
     <div class="card" style="text-align:left; margin-top:10%; width:50%">
         <div class="card-body">
             <div class="text-center">
-                <h1>Score: {{score}}</h1>
+                <h3>Your quiz has been completed, thanks!</h3>
+                <h4>Correct Answers:{{score.correct}}<br>
+                    Wrong Answers: {{score.incorrect}}</h4>
             </div>
             <div class="text-center">
                 <button (click)="returnHome()" class="btn btn-dark">Home</button>

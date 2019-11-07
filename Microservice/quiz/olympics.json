@@ -1,0 +1,36 @@
+{
+    "area": "Olympics",
+    "questions": [
+        {
+            "question": "Where were the first olympic games held?",
+            "choices": ["Atlanta", "Mexico", "Athens", "Sydney"],
+            "answer": 2
+        },
+
+        {
+            "question": "Which color represents Asia in Olympics ring?",
+            "choices": ["Red", "Yellow", "Green", "None of these"],
+            "answer": 1
+        },
+
+        {
+            "question": "Where is the headquarters of International Olympic Committee situated?",
+            "choices": ["Gerrmany", "Sweden", "Switzerland", "None of these"],
+            "answer": 2
+        },
+
+        {
+            "question": "Olympic games were held in ancient Greece in the honour of Greek God_______.",
+            "choices": ["Zeus", "Uranus", "Apollo","Jupiter"],
+            "answer": 0
+        },
+
+        {
+            "question": "Which country has hosted the most Olympics?",
+            "choices": ["United States", "China", "Japan", "None of the above"],
+            "answer": 0
+        }
+    ]
+}
+
+

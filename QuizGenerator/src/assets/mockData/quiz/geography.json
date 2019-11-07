@@ -1,0 +1,34 @@
+{
+    "area": "Geography",
+    "questions": [
+        {
+            "question": "Which ocean is on the east coast of the United States?",
+            "choices": ["Pacific", "Indian", "Eastern", "Atlantic"],
+            "answer": 3
+        },
+
+        {
+            "question": "Which is the world's largest mountain?",
+            "choices": ["K2", "Kilimanjaro", "Mount Everest", "Makalu"],
+            "answer": 2
+        },
+
+        {
+            "question": "Which is the longest river in the US?",
+            "choices": ["Missouri River", "Yukon River", "Colorado River"],
+            "answer": 0
+        },
+
+        {
+            "question": "Biggest desert in the world.",
+            "choices": ["Sahara", "Arabian", "Great Australian"],
+            "answer": 0
+        },
+
+        {
+            "question": " What is the imaginary line that connects North pole and South pole?",
+            "choices": ["Prime Axis", "Lambert Line", "Prime Meridian"],
+            "answer": 2
+        }
+    ]
+}

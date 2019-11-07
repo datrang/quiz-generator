@@ -3,6 +3,7 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { LoginService } from '../../services/login/login.service'
 import { trigger, state, style, animate, transition, keyframes} from '@angular/animations'
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -57,7 +58,7 @@ export class LoginComponent implements OnInit {
     setTimeout(() => {
       this.error = "Incorrect Credentials"
       this.errorAnimation();
-    },  200);
+    },  250);
     this.changeState(null);
 
   }

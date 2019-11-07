@@ -29,7 +29,6 @@ export class QuizComponent implements OnInit {
   ) {
     store.select('currentUser').subscribe(data => {
       if(data.userName == ""){
-        console.log("REACHED");
         router.navigate(['/login']);
       }
   })
@@ -64,9 +63,9 @@ export class QuizComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.quizForm.valid)
+    console.log(this.quizForm.value.answers);
     if(this.quizForm.valid){
-      this.quizService.finishQuiz(this.getScore());
+      this.quizService.finishQuiz(this.quiz.area, this.quizForm.value.answers);
     }else{
       this.error = "Please answer all questions";
     }

@@ -1,0 +1,37 @@
+{
+    "area": "Science",
+    "questions":[
+        {
+            "question": "Which of these is a unit of length used in marine navigation?",
+            "choices": ["Nautical mile", "Ampere", "Joule", "Hectare"],
+            "answer": 0
+        },
+
+        {
+            "question": "The definition of highest instantaneous wind speed observed or recorded best fits which science term?",
+            "choices": ["Btu", "Fission", "Peak Gust", "Mammal"],
+            "answer": 2
+        },
+
+        {
+            "question": "What type of bonding is involved in CH4?",
+            "choices": ["Metallic", "Covalent", "Ionic", "Hydrogen"],
+            "answer": 1
+        },
+
+        {
+            "question": "A cell which produces and releases antibodies.",
+            "choices": ["Macrophage", "B Cell", "Helper T Cell", "Cytotoxic T Cell", "Platelets"],
+            "answer": 1
+        },
+
+        {
+            "question": "In what spectrum where all possible frequencies are present?",
+            "choices": ["Continuous spectrum", "Emission spectrum", "Absorption spectrum"],
+            "answer": 0
+        }
+    ]
+}
+
+
+
