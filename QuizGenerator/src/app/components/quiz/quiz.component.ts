@@ -38,7 +38,6 @@ export class QuizComponent implements OnInit {
     this.quizForm = this.fb.group({
       answers: new FormArray([])
     });
-
     this.route.paramMap.pipe(
       map(params => params.get('area')),
       flatMap(area => this.quizService.getQuiz(area))

@@ -1,0 +1,59 @@
+{
+    "area": "NodeJs",
+    "questions": [
+        {
+            "question": "What is the NPM?",
+            "choices" : ["Nuget Package Manager", "Package manager for the JavaScript programming language", "Package manager for Node.js", "Node Package Management"],
+            "answer"  : 3
+        },
+        {
+            "question": "Does nodejs run on windows?",
+            "choices" : ["Yes", "No", "Yes, but only nodejs 12.6 and above"],
+            "answer"  : 0 
+        },
+        {
+            "question": "What is ‘callback’ in Node.js?",
+            "choices" : ["Just an internal method in any NodeJs application","Function used to deal with multiple requests made to the server","An internal module in NodeJs"],
+            "answer"  : 2
+        },
+        {
+            "question": "What is express?",
+            "choices" : ["An external module", "An internal module", "A NodeJs I/O command"],
+            "answer"  : 0
+        },
+        {
+            "question": "How can you delete a file in Node using fs?",
+            "choices" : ["fs.remove(path, callback)", "fs.unlink(path, callback)", "fs.delete(path, callback)"],
+            "answer"  : 1
+        },
+        {
+            "question": "In order to fire events you can do:",
+            "choices" : ["emitter.on(eventName, listener)","emitter.listeners(eventName)", "emitter.emit(eventName[, ...args])"],
+            "answer"  : 2
+        },
+        {
+            "question": "How to uninstall a dependency using npm?",
+            "choices" : ["npm install -u dependency-name", "npm uninstall dependency-name", "npm unistall -d dependency-name"],
+            "answer"  : 1
+        },
+        {
+            "question": "What is the Package.json?",
+            "choices" : [
+                "File that holds various metadata relevant to the project. This file is used to give information to npm that allows it to identify the project as well as handle the project's dependencies",
+                "File automatically generated for any operations where npm modifies either the node_modules tree, or package.json. It describes the exact tree that was generated",
+                "File present in the node_modules folder and define all the dependencies for a nodejs app"
+            ],
+            "answer"  : 0
+        },
+        {
+            "question": "How can you remove a directory?",
+            "choices" : ["fs.rmdir(path, callback)", "fs.deletedir(path, callback)", "fs.deldirectory(path, callback)"],
+            "answer"  : 0
+        },
+        {
+            "question": "To accommodate the single-threaded event loop, and handle asynchronous events Node.js uses the library?",
+            "choices" : ["Libuv", "V8Lib", "NodejsCore"],
+            "answer"  : 0
+        }
+    ]
+}
