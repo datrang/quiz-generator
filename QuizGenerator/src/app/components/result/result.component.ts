@@ -11,6 +11,9 @@ import { Store } from '@ngrx/store'
 export class ResultComponent implements OnInit {
 
   score: any;
+  correctScore;
+  incorrectScore;
+  percentScore;
 
   constructor(
     private router: Router,
@@ -23,6 +26,9 @@ export class ResultComponent implements OnInit {
       }
     });
     this.score = this.router.getCurrentNavigation().extras.state.score;
+    this.correctScore = this.score.correct
+    this.incorrectScore = this.score.incorrect
+    this.percentScore = (this.correctScore*100)/(this.correctScore + this.incorrectScore);
   }
 
   ngOnInit() {

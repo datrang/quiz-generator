@@ -6,6 +6,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 import { map, flatMap } from 'rxjs/operators';
 import { AppState } from '../../state/state/app.state'
 import { Store } from '@ngrx/store'
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 
 @Component({
   selector: 'app-quiz',
@@ -19,6 +21,11 @@ export class QuizComponent implements OnInit {
     area: "",
     questions: []
   };
+
+  timeTotal:number = 10
+  timeLeft: number = this.timeTotal;
+  timeLeftPerc: number = 100;
+  interval;
 
   constructor(
     private quizService: QuizService, 
@@ -44,8 +51,9 @@ export class QuizComponent implements OnInit {
     ).subscribe(quiz => {
       this.quiz = quiz;
       for(let i = 0; i < this.quiz.questions.length; i++){
-        this.quizAnswers.push(new FormControl ('', Validators.required));
+        this.quizAnswers.push(new FormControl (''));
       }
+      this.startTimer();
     });
   }
 
@@ -64,6 +72,7 @@ export class QuizComponent implements OnInit {
   onSubmit(){
     console.log(this.quizForm.value.answers);
     if(this.quizForm.valid){
+      clearInterval(this.interval);
       this.quizService.finishQuiz(this.quiz.area, this.quizForm.value.answers);
     }else{
       this.error = "Please answer all questions";
@@ -78,5 +87,20 @@ export class QuizComponent implements OnInit {
       }
     }
     return score;
+  }
+
+  startTimer() {
+    this.interval = setInterval(() => {
+      if(this.timeLeft > 0) {
+        this.timeLeft--;
+        this.timeLeftPerc = this.timeLeft*100/this.timeTotal
+      }else if(this.timeLeft==0){
+        //alert("Your Time is up!")
+        this.onSubmit();
+      } 
+      else {
+        
+      }
+    },1000)
   }
 }

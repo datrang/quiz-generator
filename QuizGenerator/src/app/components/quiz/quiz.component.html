@@ -5,6 +5,12 @@
                 LOADING ...
             </div>
             <div *ngIf="quiz.area != ''">
+
+                <mat-progress-bar mode="determinate" [value]="timeLeftPerc"></mat-progress-bar>
+                <div>
+                <p>Time Left:{{timeLeft}} /{{timeTotal}} seconds</p>
+                </div>
+
                 <div class="text-center">
                     <h1>{{quiz.area}} Quiz</h1>
                     <small class="text-danger">{{error}}</small>
